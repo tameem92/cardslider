@@ -151,6 +151,13 @@
                             <scrollView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rsz-eG-92Q">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nAe-1S-ga1" userLabel="backButton">
+                                        <rect key="frame" x="306" y="30" width="39" height="30"/>
+                                        <state key="normal" title="Close"/>
+                                        <connections>
+                                            <action selector="backButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iFP-EX-XZX"/>
+                                        </connections>
+                                    </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MNB-MG-oxt">
                                         <rect key="frame" x="0.0" y="647" width="375" height="0.0"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -190,7 +197,9 @@
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="e6r-3C-xwt" firstAttribute="top" secondItem="rsz-eG-92Q" secondAttribute="top" id="4P1-ge-8Wy"/>
+                                    <constraint firstAttribute="trailing" secondItem="nAe-1S-ga1" secondAttribute="trailing" constant="30" id="JF9-oj-mEY"/>
                                     <constraint firstItem="e6r-3C-xwt" firstAttribute="bottom" secondItem="MNB-MG-oxt" secondAttribute="top" priority="2" id="YRr-a7-Blk"/>
+                                    <constraint firstItem="nAe-1S-ga1" firstAttribute="top" secondItem="rsz-eG-92Q" secondAttribute="top" constant="30" id="bO5-ho-AYH"/>
                                     <constraint firstItem="e6r-3C-xwt" firstAttribute="leading" secondItem="rsz-eG-92Q" secondAttribute="leading" id="c8q-TT-onJ"/>
                                     <constraint firstAttribute="trailing" secondItem="e6r-3C-xwt" secondAttribute="trailing" id="i9T-Kt-71w"/>
                                     <constraint firstAttribute="bottom" secondItem="e6r-3C-xwt" secondAttribute="bottom" id="sfD-E8-TDU"/>
@@ -234,6 +243,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="backButton" destination="nAe-1S-ga1" id="KQz-ZZ-PNv"/>
                         <outlet property="cardTitleContainer" destination="ZYZ-8Y-xnh" id="MSL-aR-2mN"/>
                         <outlet property="cardTitleView" destination="4Bz-3b-7WF" id="l98-8V-qkD"/>
                         <outlet property="collectionView" destination="jWQ-Kq-YtS" id="gGT-eP-Kz7"/>

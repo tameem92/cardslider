@@ -33,7 +33,7 @@ public protocol CardSliderDataSource: class {
 
 open class CardSliderViewController: UIViewController, UIScrollViewDelegate {
 	@IBOutlet private var titleLabel: UILabel!
-	@IBOutlet private var collectionView: UICollectionView!
+    @IBOutlet private var collectionView: UICollectionView!
 	@IBOutlet private var headerView: UIView!
 	@IBOutlet private var cardTitleContainer: UIView!
 	@IBOutlet private var cardTitleView: CardTitleView!
@@ -42,7 +42,13 @@ open class CardSliderViewController: UIViewController, UIScrollViewDelegate {
 	@IBOutlet private var scrollView: UIScrollView!
 	@IBOutlet private var scrollStack: UIStackView!
 	@IBOutlet private var scrollPlaceholderView: UIView!
-	private weak var cardSnapshot: UIView?
+    
+    @IBAction func backButton(_ sender: Any) {
+        print("Back Button Pressed")
+        self.dismiss(animated: false, completion:nil)
+    }
+    
+    private weak var cardSnapshot: UIView?
 	private weak var cardTitleSnapshot: UIView?
 	private weak var openCardCell: UICollectionViewCell?
 	private var animator: UIViewPropertyAnimator?
