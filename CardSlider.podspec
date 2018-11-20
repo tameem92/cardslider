@@ -7,9 +7,9 @@ Pod::Spec.new do |s|
     s.license          = 'MIT'
     s.author           = 'J. Vasilenko'
     s.social_media_url = 'https://twitter.com/Ramotion'
-    s.source           = { :git => 'https://github.com/Ramotion/cardslider.git', :tag => s.version.to_s }
+    s.source           = { :git => 'https://github.com/tameem92/cardslider.git', :branch => 'f_fix_storyboard_error' }
 
-    s.ios.deployment_target = '11.0'
+    s.ios.deployment_target = '12.1'
 
     s.source_files  = 'CardSlider/**/*.{swift}'
     s.resource_bundles = {
