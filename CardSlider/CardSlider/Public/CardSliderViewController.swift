@@ -65,6 +65,11 @@ open class CardSliderViewController: UIViewController, UIScrollViewDelegate {
 	
 	override open func viewDidLoad() {
 		super.viewDidLoad()
+        
+        let down = UISwipeGestureRecognizer(target : self, action : #selector(CardSliderViewController.downSwipe))
+        down.direction = .down
+        self.collectionView.addGestureRecognizer(down)
+        
 		collectionView.isPagingEnabled = true
 		collectionView.showsHorizontalScrollIndicator = false
 		collectionView.delaysContentTouches = false
@@ -75,15 +80,24 @@ open class CardSliderViewController: UIViewController, UIScrollViewDelegate {
 			titleLabel?.text = title
 		}
 	}
+    
+    @objc
+    func downSwipe(){
+        print("I swiped down")
+        self.navigationController?.popViewController(animated: true)
+        self.dismiss(animated: true, completion: nil)
+    }
 	
 	open override func viewWillAppear(_ animated: Bool) {
 		super.viewWillAppear(animated)
+        
 		titleLabel.text = title
 		self.collectionView.collectionViewLayout.invalidateLayout()
 		self.collectionView.layoutIfNeeded()
 		self.prepareFirstCard()
 	}
-	
+
+  
 	private func prepareFirstCard() {
 		guard let layout = collectionView.collectionViewLayout as? CardsLayout else { return }
 		let item = dataSource.item(for: dataSource.numberOfItems() - layout.currentPage - 1)
