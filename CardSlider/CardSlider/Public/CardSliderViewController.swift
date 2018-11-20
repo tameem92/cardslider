@@ -66,13 +66,10 @@ open class CardSliderViewController: UIViewController, UIScrollViewDelegate {
 	override open func viewDidLoad() {
 		super.viewDidLoad()
         
-        let down = UISwipeGestureRecognizer(target : self, action : #selector(CardSliderViewController.downSwipe))
-        down.direction = .down
-        self.collectionView.addGestureRecognizer(down)
-        
 		collectionView.isPagingEnabled = true
 		collectionView.showsHorizontalScrollIndicator = false
 		collectionView.delaysContentTouches = false
+        self.navigationController?.navigationBar.isHidden = false
 	}
 	
 	open override var title: String? {
@@ -80,13 +77,6 @@ open class CardSliderViewController: UIViewController, UIScrollViewDelegate {
 			titleLabel?.text = title
 		}
 	}
-    
-    @objc
-    func downSwipe(){
-        print("I swiped down")
-        self.navigationController?.popViewController(animated: true)
-        self.dismiss(animated: true, completion: nil)
-    }
 	
 	open override func viewWillAppear(_ animated: Bool) {
 		super.viewWillAppear(animated)

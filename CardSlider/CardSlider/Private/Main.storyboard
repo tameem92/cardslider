@@ -33,9 +33,6 @@
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="6TR-w8-Hpx" secondAttribute="bottom" constant="15" id="m0l-hR-iRV"/>
                                 </constraints>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="4La-JE-wWR" appends="YES" id="VIf-Se-WnN"/>
-                                </connections>
                             </view>
                             <collectionView multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="jWQ-Kq-YtS" userLabel="collection view">
                                 <rect key="frame" x="0.0" y="79" width="375" height="498"/>
@@ -168,9 +165,6 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="400"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <gestureRecognizers/>
-                                                <connections>
-                                                    <outletCollection property="gestureRecognizers" destination="4La-JE-wWR" appends="YES" id="TQw-bF-IYJ"/>
-                                                </connections>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NQf-hV-B7l">
                                                 <rect key="frame" x="0.0" y="400" width="375" height="639"/>
@@ -253,11 +247,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <swipeGestureRecognizer direction="right" id="4La-JE-wWR">
-                    <connections>
-                        <outlet property="delegate" destination="BYZ-38-t0r" id="Lco-yS-g3Q"/>
-                    </connections>
-                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="116" y="131.78410794602701"/>
         </scene>
