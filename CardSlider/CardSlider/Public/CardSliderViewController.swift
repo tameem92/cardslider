@@ -43,7 +43,9 @@ open class CardSliderViewController: UIViewController, UIScrollViewDelegate {
 	@IBOutlet private var scrollStack: UIStackView!
 	@IBOutlet private var scrollPlaceholderView: UIView!
     
-    @IBAction func backButton(_ sender: Any) {
+    
+    
+    @IBAction func onBackClick(_ sender: UIButton) {
         print("Back Button Pressed")
         self.dismiss(animated: false, completion:nil)
     }

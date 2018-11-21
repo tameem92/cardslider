@@ -25,7 +25,7 @@
                                         <rect key="frame" x="326" y="30" width="39" height="30"/>
                                         <state key="normal" title="Close"/>
                                         <connections>
-                                            <action selector="backButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iFP-EX-XZX"/>
+                                            <action selector="onBackClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BD6-GI-nNA"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Movies" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6TR-w8-Hpx">
