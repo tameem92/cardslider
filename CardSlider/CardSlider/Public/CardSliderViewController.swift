@@ -47,6 +47,7 @@ open class CardSliderViewController: UIViewController, UIScrollViewDelegate {
     
     @IBAction func onBackClick(_ sender: UIButton) {
         print("Back Button Pressed")
+        _ = navigationController?.popToRootViewController(animated: true)
         self.dismiss(animated: false, completion:nil)
     }
     
