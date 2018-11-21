@@ -243,7 +243,6 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="backButton" destination="nAe-1S-ga1" id="KQz-ZZ-PNv"/>
                         <outlet property="cardTitleContainer" destination="ZYZ-8Y-xnh" id="MSL-aR-2mN"/>
                         <outlet property="cardTitleView" destination="4Bz-3b-7WF" id="l98-8V-qkD"/>
                         <outlet property="collectionView" destination="jWQ-Kq-YtS" id="gGT-eP-Kz7"/>

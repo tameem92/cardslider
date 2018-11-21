@@ -14,7 +14,6 @@
 		748C35D42177A28E00222586 /* CardsLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748C35CD2177A28E00222586 /* CardsLayout.swift */; };
 		748C35D72177A49F00222586 /* CardSliderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748C35D62177A49F00222586 /* CardSliderViewController.swift */; };
 		79F9E0B421A4E13100E3CC0F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 748C35CE2177A28E00222586 /* Main.storyboard */; };
-		79F9E0B621A4E2FA00E3CC0F /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7448447C21779CEF00589933 /* Info.plist */; };
 		969E76BA2178E8C200877BF5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 969E76B92178E8C200877BF5 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
@@ -159,7 +158,6 @@
 			files = (
 				969E76BA2178E8C200877BF5 /* Assets.xcassets in Resources */,
 				79F9E0B421A4E13100E3CC0F /* Main.storyboard in Resources */,
-				79F9E0B621A4E2FA00E3CC0F /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
