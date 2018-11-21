@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name             = 'CardSlider'
-    s.version          = '0.0.3'
+    s.version          = '0.0.4'
     s.summary          = 'UI control from Ramotion'
     s.description      = 'Custom UICollectionView with transition'
     s.homepage         = 'https://github.com/ramotion/cardslider'
