@@ -21,13 +21,6 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="92Z-gf-dSW" userLabel="header view">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="79"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nAe-1S-ga1" userLabel="backButton">
-                                        <rect key="frame" x="326" y="30" width="39" height="30"/>
-                                        <state key="normal" title="Close"/>
-                                        <connections>
-                                            <action selector="backButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iFP-EX-XZX"/>
-                                        </connections>
-                                    </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Movies" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6TR-w8-Hpx">
                                         <rect key="frame" x="15" y="35" width="345" height="29"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
@@ -38,8 +31,6 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <gestureRecognizers/>
                                 <constraints>
-                                    <constraint firstItem="nAe-1S-ga1" firstAttribute="top" secondItem="92Z-gf-dSW" secondAttribute="top" constant="30" id="IOv-RZ-TfB"/>
-                                    <constraint firstAttribute="trailing" secondItem="nAe-1S-ga1" secondAttribute="trailing" constant="10" id="ZKu-xH-tO2"/>
                                     <constraint firstAttribute="bottom" secondItem="6TR-w8-Hpx" secondAttribute="bottom" constant="15" id="m0l-hR-iRV"/>
                                 </constraints>
                             </view>
@@ -157,6 +148,13 @@
                                     <constraint firstAttribute="trailing" secondItem="I7q-AA-C5G" secondAttribute="trailing" constant="15" id="tb3-s2-9V2"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nAe-1S-ga1" userLabel="backButton">
+                                <rect key="frame" x="306" y="89" width="39" height="30"/>
+                                <state key="normal" title="Close"/>
+                                <connections>
+                                    <action selector="backButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iFP-EX-XZX"/>
+                                </connections>
+                            </button>
                             <scrollView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rsz-eG-92Q">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
@@ -231,9 +229,11 @@
                             <constraint firstItem="cI7-dB-WkA" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="3/5" id="cof-bM-Y4j"/>
                             <constraint firstItem="cI7-dB-WkA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="dyd-Uu-qKQ"/>
                             <constraint firstAttribute="trailing" secondItem="rsz-eG-92Q" secondAttribute="trailing" id="fZF-pe-3wW"/>
+                            <constraint firstItem="nAe-1S-ga1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="306" id="gtK-KR-JmS"/>
                             <constraint firstItem="rsz-eG-92Q" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="hB6-wi-DsB"/>
                             <constraint firstItem="6TR-w8-Hpx" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="-15" id="iaS-Wu-ozX"/>
                             <constraint firstAttribute="trailing" secondItem="92Z-gf-dSW" secondAttribute="trailing" id="ihB-Wy-ZnX"/>
+                            <constraint firstItem="nAe-1S-ga1" firstAttribute="top" secondItem="92Z-gf-dSW" secondAttribute="bottom" constant="10" id="nHz-DB-8vW"/>
                             <constraint firstItem="92Z-gf-dSW" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="o4F-4h-LKZ"/>
                             <constraint firstItem="jWQ-Kq-YtS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="tcQ-U5-aTK"/>
                             <constraint firstAttribute="trailing" secondItem="cI7-dB-WkA" secondAttribute="trailing" id="u7f-Wl-qdT"/>
