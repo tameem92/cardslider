@@ -47,8 +47,12 @@ open class CardSliderViewController: UIViewController, UIScrollViewDelegate {
     
     @IBAction func onBackClick(_ sender: UIButton) {
         print("Back Button Pressed")
-        _ = navigationController?.popToRootViewController(animated: true)
-        self.dismiss(animated: false, completion:nil)
+        
+        let viewControllers: [UIViewController] = self.navigationController!.viewControllers as [UIViewController]
+        self.navigationController!.popToViewController(viewControllers[viewControllers.count - 3], animated: true)
+    
+//        _ = navigationController?.popToRootViewController(animated: true)
+//        self.dismiss(animated: false, completion:nil)
     }
     
     private weak var cardSnapshot: UIView?
