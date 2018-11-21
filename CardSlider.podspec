@@ -9,10 +9,10 @@ Pod::Spec.new do |s|
     s.social_media_url = 'https://twitter.com/Ramotion'
     s.source           = { :git => 'https://github.com/tameem92/cardslider.git', :branch => 'f_fix_storyboard_error' }
 
+    s.resource_bundles = {
+      'CardSlider' => ['CardSlider/**/*.{storyboard,.xcassets}']
+    }
     s.ios.deployment_target = '12.1'
 
     s.source_files  = 'CardSlider/**/*.{swift}'
-    s.resource_bundles = {
-    'CardSlider' => ['CardSlider/**/*.{storyboard,.xcassets}']
-  }
 end
