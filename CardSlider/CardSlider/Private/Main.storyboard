@@ -21,7 +21,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="92Z-gf-dSW" userLabel="header view">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="79"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nAe-1S-ga1" userLabel="backButton">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nAe-1S-ga1">
                                         <rect key="frame" x="326" y="30" width="39" height="30"/>
                                         <state key="normal" title="Close"/>
                                         <connections>
