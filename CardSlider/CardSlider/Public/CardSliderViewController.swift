@@ -47,12 +47,9 @@ open class CardSliderViewController: UIViewController, UIScrollViewDelegate {
     
     @IBAction func onBackClick(_ sender: UIButton) {
         print("Back Button Pressed")
-        
-//        let viewControllers: [UIViewController] = self.navigationController!.viewControllers as [UIViewController]
-//        self.navigationController!.popToViewController(viewControllers[viewControllers.count - 3], animated: true)
-        
+
+        stopCardAnimation()
         self.navigationController!.popToRootViewController(animated: true)
-//        self.dismiss(animated: false, completion:nil)
     }
     
     private weak var cardSnapshot: UIView?
@@ -168,6 +165,12 @@ open class CardSliderViewController: UIViewController, UIScrollViewDelegate {
 		let offset = min(-cardOversize, -pow(scrollView.contentOffset.y - cardOversize, 0.9))
 		snapshot.frame = CGRect(x: -self.cardOversize, y: -self.cardOversize + offset, width: width, height: height)
 	}
+    
+    private func stopCardAnimation() {
+        animator?.stopAnimation(true)
+        animator?.finishAnimation(at: .current)
+        animator = nil
+    }
 	
 	private func showCardDescription(for indexPath: IndexPath) {
 		guard let cell = collectionView.cellForItem(at: indexPath) else { return }
