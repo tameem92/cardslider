@@ -51,7 +51,7 @@ open class CardSliderViewController: UIViewController, UIScrollViewDelegate {
 //        let viewControllers: [UIViewController] = self.navigationController!.viewControllers as [UIViewController]
 //        self.navigationController!.popToViewController(viewControllers[viewControllers.count - 3], animated: true)
         
-        self.navigationController!.popToRootViewController(animated: true)
+//        self.navigationController!.popToRootViewController(animated: true)
 //        self.dismiss(animated: false, completion:nil)
     }
     
@@ -93,6 +93,7 @@ open class CardSliderViewController: UIViewController, UIScrollViewDelegate {
 	
 	open override func viewWillAppear(_ animated: Bool) {
 		super.viewWillAppear(animated)
+        self.navigationController?.navigationBar.isHidden = true
         
 		titleLabel.text = title
 		self.collectionView.collectionViewLayout.invalidateLayout()

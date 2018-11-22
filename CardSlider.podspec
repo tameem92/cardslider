@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
     s.source           = { :git => 'https://github.com/tameem92/cardslider.git', :branch => 'f_fix_storyboard_error' }
 
     s.resource_bundles = {
-      'CardSlider' => ['CardSlider/**/*.{storyboard,.xcassets}']
+      'CardSlider' => ['CardSlider/**/*.{storyboard,.xcassets}', 'CardSlider/**/Assets.xcassets']
     }
     s.ios.deployment_target = '12.1'
 
