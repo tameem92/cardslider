@@ -38,12 +38,17 @@ open class CardSliderViewController: UIViewController, UIScrollViewDelegate {
 	@IBOutlet private var cardTitleContainer: UIView!
 	@IBOutlet private var cardTitleView: CardTitleView!
 	@IBOutlet private var ratingView: RatingView!
-	@IBOutlet private var descriptionLabel: UILabel!
+    @IBOutlet weak var cardBookmarkView: UIView!
+    
+    @IBOutlet private var descriptionLabel: UILabel!
 	@IBOutlet private var scrollView: UIScrollView!
 	@IBOutlet private var scrollStack: UIStackView!
 	@IBOutlet private var scrollPlaceholderView: UIView!
     
     
+    @IBAction func onBookmarkClick(_ sender: UIButton) {
+        print("Back Button Pressed")
+    }
     
     @IBAction func onBackClick(_ sender: UIButton) {
         print("Back Button Pressed")

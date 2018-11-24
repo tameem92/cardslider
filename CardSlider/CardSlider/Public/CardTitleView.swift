@@ -9,6 +9,8 @@ struct CardTitle: Equatable {
 class CardTitleView: UIView {
 	@IBOutlet private var titleLabel: UILabel!
 	@IBOutlet private var subtitleLabel: UILabel!
+    
+    
 	private var firstTitle: CardTitle?
 	private var secondTitle: CardTitle?
 	private weak var firstSnapshot: UIView?

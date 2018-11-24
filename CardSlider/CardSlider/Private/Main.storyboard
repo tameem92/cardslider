@@ -73,10 +73,10 @@
                                         <rect key="frame" x="15" y="20" width="345" height="50"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Bz-3b-7WF" customClass="CardTitleView" customModule="CardSlider" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="210" height="50"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="165" height="50"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="i6x-Tp-SRF">
-                                                        <rect key="frame" x="0.0" y="0.0" width="210" height="50"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="165" height="50"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" minimumScaleFactor="0.10000000000000001" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="42r-ww-GgU">
                                                                 <rect key="frame" x="0.0" y="0.0" width="41.5" height="32"/>
@@ -105,6 +105,23 @@
                                                     <outlet property="subtitleLabel" destination="SyH-Ud-IBM" id="DQ3-1G-6BW"/>
                                                     <outlet property="titleLabel" destination="42r-ww-GgU" id="0x2-yy-cEQ"/>
                                                 </connections>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l2S-i6-aRK" userLabel="Bookmark View">
+                                                <rect key="frame" x="180" y="0.0" width="30" height="30"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="izf-xL-nYc">
+                                                        <rect key="frame" x="4" y="4" width="22" height="22"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <connections>
+                                                            <action selector="onBookmarkClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KCx-W2-k6V"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="dhh-Ci-oM6"/>
+                                                    <constraint firstAttribute="width" constant="30" id="zDH-Tw-XFb"/>
+                                                </constraints>
                                             </view>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="NDv-RU-3bR" customClass="RatingView" customModule="CardSlider" customModuleProvider="target">
                                                 <rect key="frame" x="225" y="0.0" width="120" height="20"/>
@@ -243,6 +260,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="cardBookmarkView" destination="l2S-i6-aRK" id="Qwg-8N-0ku"/>
                         <outlet property="cardTitleContainer" destination="ZYZ-8Y-xnh" id="MSL-aR-2mN"/>
                         <outlet property="cardTitleView" destination="4Bz-3b-7WF" id="l98-8V-qkD"/>
                         <outlet property="collectionView" destination="jWQ-Kq-YtS" id="gGT-eP-Kz7"/>
