@@ -17,7 +17,6 @@ class CardSliderCell: UICollectionViewCell, ParallaxCardCell {
 	private var shadeOpacity: CGFloat = 0
 	
 	open var imageView = UIImageView()
-    open var bookmarkButton = UIButton()
 	open var shadeView = UIView()
 	open var highlightView = UIView()
 	
@@ -28,25 +27,12 @@ class CardSliderCell: UICollectionViewCell, ParallaxCardCell {
 		imageView.contentMode = .scaleAspectFill
 		contentView.addSubview(imageView)
         
-        bookmarkButton = UIButton(frame: CGRect(x:0, y:335, width:120, height:40))
-        bookmarkButton.backgroundColor = UIColor(red: 0.8, green: 0.6, blue: 0.2, alpha: 1.0)
-        bookmarkButton.tag = 3
-        bookmarkButton.setTitle("Bookmark", for: .normal)
-        bookmarkButton.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
-        imageView.addSubview(bookmarkButton)
-        
 		shadeView.backgroundColor = .white
 		contentView.addSubview(shadeView)
 		highlightView.backgroundColor = .black
 		highlightView.alpha = 0
 		contentView.addSubview(highlightView)
-        
-        highlightView.bringSubviewToFront(bookmarkButton)
 	}
-    
-    @objc open func buttonAction(sender: UIButton!) {
-        print("Bookmark pressed")
-    }
 	
 	open func setShadeOpacity(progress: CGFloat) {
 		shadeOpacity = progress
@@ -84,7 +70,6 @@ class CardSliderCell: UICollectionViewCell, ParallaxCardCell {
 		zoom = min(zoom, 1)
 		imageView.frame = bounds.applying(CGAffineTransform(scaleX: 1 + (1 - zoom), y: 1 + (1 - zoom)))
 		imageView.center = CGPoint(x: bounds.midX, y: bounds.midY)
-        bookmarkButton.center = CGPoint(x: bounds.midX + 30, y: bounds.midY + 30)
 	}
 	
 	open func updateMask() {

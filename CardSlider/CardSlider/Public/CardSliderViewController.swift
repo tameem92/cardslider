@@ -48,6 +48,7 @@ open class CardSliderViewController: UIViewController, UIScrollViewDelegate {
     
     @IBAction func onBookmarkClick(_ sender: UIButton) {
         print("Back Button Pressed")
+        
     }
     
     @IBAction func onBackClick(_ sender: UIButton) {
