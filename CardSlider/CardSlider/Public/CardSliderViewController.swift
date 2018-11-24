@@ -190,6 +190,8 @@ open class CardSliderViewController: UIViewController, UIScrollViewDelegate {
         bookmarkButton.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
         cardSnapshot.addSubview(bookmarkButton)
         
+//        self.bringSubview(toFront: bookmarkButton)
+        
         
 		self.cardSnapshot = cardSnapshot
 		

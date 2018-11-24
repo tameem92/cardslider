@@ -28,18 +28,18 @@ class CardSliderCell: UICollectionViewCell, ParallaxCardCell {
 		imageView.contentMode = .scaleAspectFill
 		contentView.addSubview(imageView)
         
-        bookmarkButton = UIButton(frame: CGRect(x:0, y:335, width:120, height:40))
-        bookmarkButton.backgroundColor = UIColor(red: 0.8, green: 0.6, blue: 0.2, alpha: 1.0)
-        bookmarkButton.tag = 3
-        bookmarkButton.setTitle("Bookmark", for: .normal)
-        bookmarkButton.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
-        imageView.addSubview(bookmarkButton)
-        
 		shadeView.backgroundColor = .white
 		contentView.addSubview(shadeView)
 		highlightView.backgroundColor = .black
 		highlightView.alpha = 0
 		contentView.addSubview(highlightView)
+        
+        bookmarkButton = UIButton(frame: CGRect(x:0, y:335, width:120, height:40))
+        bookmarkButton.backgroundColor = UIColor(red: 0.8, green: 0.6, blue: 0.2, alpha: 1.0)
+        bookmarkButton.tag = 3
+        bookmarkButton.setTitle("Bookmark", for: .normal)
+        bookmarkButton.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
+        highlightView.addSubview(bookmarkButton)
 	}
     
     @objc open func buttonAction(sender: UIButton!) {
