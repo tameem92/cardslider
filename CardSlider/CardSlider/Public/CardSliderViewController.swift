@@ -173,9 +173,9 @@ open class CardSliderViewController: UIViewController, UIScrollViewDelegate {
 	}
     
     private func stopCardAnimation() {
+        print("Stopped all running animations")
+        cardTitleView.stopAnimaton()
         animator?.stopAnimation(true)
-        animator?.finishAnimation(at: .current)
-        animator = nil
     }
 	
 	private func showCardDescription(for indexPath: IndexPath) {
@@ -186,19 +186,7 @@ open class CardSliderViewController: UIViewController, UIScrollViewDelegate {
 		self.cardTitleSnapshot = cardTitleSnapshot
 		
 		let cardSnapshot = cell.renderSnapshot()
-        
-
     
-        let bookmarkButton = UIButton(frame: CGRect(x:0, y:335, width:120, height:40))
-        bookmarkButton.backgroundColor = UIColor(red: 0.8, green: 0.6, blue: 0.2, alpha: 1.0)
-        bookmarkButton.tag = 3
-        bookmarkButton.setTitle("Bookmark", for: .normal)
-        bookmarkButton.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
-        cardSnapshot.addSubview(bookmarkButton)
-        
-//        self.bringSubview(toFront: bookmarkButton)
-        
-        
 		self.cardSnapshot = cardSnapshot
 		
 		descriptionLabel.text = dataSource.item(for: dataSource.numberOfItems() - indexPath.item - 1).description
@@ -218,12 +206,7 @@ open class CardSliderViewController: UIViewController, UIScrollViewDelegate {
 		}
 		statusbarStyle = .lightContent
 	}
-	
-    @objc open func buttonAction(sender: UIButton!) {
-        print("Bookmark pressed")
-    }
     
-
 	private func hideCardDescription() {
 		guard !scrollView.isHidden, isShowingDescription else { return }
 		isShowingDescription = false

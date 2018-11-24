@@ -26,6 +26,10 @@ class CardTitleView: UIView {
 		subtitleLabel.alpha = 1
 	}
 	
+    func stopAnimaton() {
+        animator?.stopAnimation(true)
+    }
+    
 	func set(title: CardTitle) {
 		reset()
 		titleLabel.text = title.title
