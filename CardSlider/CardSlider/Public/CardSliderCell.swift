@@ -81,7 +81,9 @@ class CardSliderCell: UICollectionViewCell, ParallaxCardCell {
 	open func updateImagePosition() {
 		zoom = min(zoom, 1)
 		imageView.frame = bounds.applying(CGAffineTransform(scaleX: 1 + (1 - zoom), y: 1 + (1 - zoom)))
+        bookmarkButton.frame = bounds.applying(CGAffineTransform(scaleX: 1 + (1 - zoom), y: 1 + (1 - zoom)))
 		imageView.center = CGPoint(x: bounds.midX, y: bounds.midY)
+        bookmarkButton.center = CGPoint(x: bounds.midX + 30, y: bounds.midY + 30)
 	}
 	
 	open func updateMask() {
