@@ -27,6 +27,11 @@ public protocol CardSliderDataSource: class {
 	func numberOfItems() -> Int
 }
 
+public protocol BookmarkDelegate
+{
+    func bookmarkAdded(bookmark: String)
+}
+
 /// A view controller displaying a slider of cards, represented by CardSliderItems.
 ///
 /// Needs CardSliderDataSource to show data.
@@ -45,10 +50,12 @@ open class CardSliderViewController: UIViewController, UIScrollViewDelegate {
 	@IBOutlet private var scrollStack: UIStackView!
 	@IBOutlet private var scrollPlaceholderView: UIView!
     
+    var delegate:BookmarkDelegate?
+    
     
     @IBAction func onBookmarkClick(_ sender: UIButton) {
         print("Back Button Pressed")
-        
+        delegate?.bookmarkAdded(bookmark: "Pizza di Mama")
     }
     
     @IBAction func onBackClick(_ sender: UIButton) {
