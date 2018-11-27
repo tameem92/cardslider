@@ -25,6 +25,7 @@ public protocol CardSliderDataSource: class {
 	
 	/// Total number of cards.
 	func numberOfItems() -> Int
+    
 }
 
 public protocol BookmarkDelegate
@@ -50,8 +51,7 @@ open class CardSliderViewController: UIViewController, UIScrollViewDelegate {
 	@IBOutlet private var scrollStack: UIStackView!
 	@IBOutlet private var scrollPlaceholderView: UIView!
     
-    var delegate:BookmarkDelegate?
-    
+    public var delegate : BookmarkDelegate?
     
     @IBAction func onBookmarkClick(_ sender: UIButton) {
         print("Back Button Pressed")
