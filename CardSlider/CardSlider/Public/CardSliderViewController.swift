@@ -51,6 +51,7 @@ open class CardSliderViewController: UIViewController, UIScrollViewDelegate {
 	@IBOutlet private var scrollStack: UIStackView!
 	@IBOutlet private var scrollPlaceholderView: UIView!
     
+    @IBOutlet weak var bookmarkButton: UIButton!
     public var delegate : BookmarkDelegate?
     
     @IBAction func onBookmarkClick(_ sender: UIButton) {
@@ -88,6 +89,9 @@ open class CardSliderViewController: UIViewController, UIScrollViewDelegate {
 	
 	override open func viewDidLoad() {
 		super.viewDidLoad()
+        
+        bookmarkButton.setImage(UIImage.init(named: "bookmark"), for: .normal)
+        bookmarkButton.imageView?.contentMode = .scaleAspectFit
         
 		collectionView.isPagingEnabled = true
 		collectionView.showsHorizontalScrollIndicator = false

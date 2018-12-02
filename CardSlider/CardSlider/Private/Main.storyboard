@@ -22,7 +22,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="79"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nAe-1S-ga1">
-                                        <rect key="frame" x="326" y="40" width="39" height="30"/>
+                                        <rect key="frame" x="326" y="50" width="39" height="30"/>
                                         <state key="normal" title="Close"/>
                                         <connections>
                                             <action selector="onBackClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BD6-GI-nNA"/>
@@ -38,8 +38,8 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <gestureRecognizers/>
                                 <constraints>
-                                    <constraint firstItem="nAe-1S-ga1" firstAttribute="top" secondItem="92Z-gf-dSW" secondAttribute="top" constant="40" id="IOv-RZ-TfB"/>
-                                    <constraint firstAttribute="trailing" secondItem="nAe-1S-ga1" secondAttribute="trailing" constant="10" id="ZKu-xH-tO2"/>
+                                    <constraint firstAttribute="trailing" secondItem="nAe-1S-ga1" secondAttribute="trailing" constant="10" id="bwb-c9-IYH"/>
+                                    <constraint firstItem="nAe-1S-ga1" firstAttribute="top" secondItem="92Z-gf-dSW" secondAttribute="top" constant="50" id="lDn-lm-0ee"/>
                                     <constraint firstAttribute="bottom" secondItem="6TR-w8-Hpx" secondAttribute="bottom" constant="15" id="m0l-hR-iRV"/>
                                 </constraints>
                             </view>
@@ -260,6 +260,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="bookmarkButton" destination="izf-xL-nYc" id="cMT-Ld-2qm"/>
                         <outlet property="cardBookmarkView" destination="l2S-i6-aRK" id="Qwg-8N-0ku"/>
                         <outlet property="cardTitleContainer" destination="ZYZ-8Y-xnh" id="MSL-aR-2mN"/>
                         <outlet property="cardTitleView" destination="4Bz-3b-7WF" id="l98-8V-qkD"/>
