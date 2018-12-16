@@ -20,6 +20,9 @@ public protocol CardSliderItem {
     
     /// Will be displayed as scrollable text in the expanded view.
     var text: String? { get }
+    
+    /// Will be displayed as scrollable text in the expanded view.
+    var bookmarked: Bool? { get }
 }
 
 public protocol CardSliderDataSource: class {
@@ -56,11 +59,12 @@ open class CardSliderViewController: UIViewController, UIScrollViewDelegate {
     
     @IBOutlet weak var cardBookmarkButton: UIButton!
     public var delegate : BookmarkDelegate?
+    public var currentIsBookmarked : Bool = false
     public var currentTitle : String = ""
     
     @IBAction func onBookmarkClick(_ sender: UIButton) {
         let bookmark = titleLabel.text ?? ""
-        print("Bookmark button pressed \(bookmark) and item \(currentTitle)")
+        print("Bookmark button pressed \(bookmark) and item \(currentTitle) with bookmarked \(currentIsBookmarked)")
         
         cardBookmarkButton.adjustsImageWhenHighlighted = false
         cardBookmarkButton.tintColor = .red
@@ -302,6 +306,7 @@ extension CardSliderViewController: UICollectionViewDelegate, UICollectionViewDa
 		guard let cell = cell as? CardSliderCell else { return }
 		let item = dataSource.item(for: dataSource.numberOfItems() - indexPath.item - 1)
 		cell.imageView.image = item.image
+
 	}
 	
 	public func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
@@ -322,6 +327,7 @@ extension CardSliderViewController: CardsLayoutDelegate {
 		let currentItem = dataSource.item(for: dataSource.numberOfItems() - currentIndex - 1)
 		let nextItem = dataSource.item(for: dataSource.numberOfItems() - nextIndex - 1)
         self.currentTitle = nextItem.title
+        self.currentIsBookmarked = nextItem.bookmarked ?? false
 		
 		ratingView.rating = (progress > 0.5 ? nextItem : currentItem).rating
 		let currentTitle = CardTitle(title: currentItem.title, subtitle: currentItem.subtitle)
