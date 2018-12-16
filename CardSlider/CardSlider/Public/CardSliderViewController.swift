@@ -313,6 +313,9 @@ extension CardSliderViewController: CardsLayoutDelegate {
         trackCurrentIndex = currentIndex
 		let currentItem = dataSource.item(for: dataSource.numberOfItems() - currentIndex - 1)
 		let nextItem = dataSource.item(for: dataSource.numberOfItems() - nextIndex - 1)
+        
+        print("Current item is \(currentItem)")
+        print("Next item is \(nextItem)")
 		
 		ratingView.rating = (progress > 0.5 ? nextItem : currentItem).rating
 		let currentTitle = CardTitle(title: currentItem.title, subtitle: currentItem.subtitle)
