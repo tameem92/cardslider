@@ -35,7 +35,7 @@ class CardTitleView: UIView {
 		titleLabel.text = title.title
 		subtitleLabel.text = title.subtitle
 	}
-	
+    
 	func transition(between firstTitle: CardTitle, secondTitle: CardTitle, progress: CGFloat) {
 		guard firstTitle != self.firstTitle, secondTitle != self.secondTitle else {
 			animator?.fractionComplete = progress
