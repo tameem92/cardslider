@@ -17,6 +17,9 @@ public protocol CardSliderItem {
 	
 	/// Will be displayed as scrollable text in the expanded view.
 	var description: String? { get }
+    
+    /// Will be displayed as scrollable text in the expanded view.
+    var text: String? { get }
 }
 
 public protocol CardSliderDataSource: class {
@@ -55,8 +58,10 @@ open class CardSliderViewController: UIViewController, UIScrollViewDelegate {
     public var delegate : BookmarkDelegate?
     
     @IBAction func onBookmarkClick(_ sender: UIButton) {
-        print("Back Button Pressed")
-        delegate?.bookmarkAdded(bookmark: "Pizza di Mama")
+        let bookmark = titleLabel.text ?? ""
+        
+        print("Back Button Pressed \(bookmark)")
+        delegate?.bookmarkAdded(bookmark: bookmark)
     }
     
     @IBAction func onBackClick(_ sender: UIButton) {
