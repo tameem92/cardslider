@@ -56,14 +56,11 @@ open class CardSliderViewController: UIViewController, UIScrollViewDelegate {
     
     @IBOutlet weak var bookmarkButton: UIButton!
     public var delegate : BookmarkDelegate?
-    public var trackCurrentIndex : Int = 0
+    public var currentTitle : String = ""
     
     @IBAction func onBookmarkClick(_ sender: UIButton) {
         let bookmark = titleLabel.text ?? ""
-        let currentItem = dataSource.item(for: dataSource.numberOfItems() - trackCurrentIndex - 1)
-        
-        print("Bookmark button pressed \(bookmark) and item \(currentItem)")
-        print(sender.superview)
+        print("Bookmark button pressed \(bookmark) and item \(currentTitle)")
         
         delegate?.bookmarkAdded(bookmark: bookmark)
     }
@@ -312,12 +309,9 @@ extension CardSliderViewController: UICollectionViewDelegate, UICollectionViewDa
 
 extension CardSliderViewController: CardsLayoutDelegate {
 	func transition(between currentIndex: Int, and nextIndex: Int, progress: CGFloat) {
-        trackCurrentIndex = currentIndex
 		let currentItem = dataSource.item(for: dataSource.numberOfItems() - currentIndex - 1)
 		let nextItem = dataSource.item(for: dataSource.numberOfItems() - nextIndex - 1)
-        
-        print("Current item is \(currentItem)")
-        print("Next item is \(nextItem)")
+        self.currentTitle = nextItem.title
 		
 		ratingView.rating = (progress > 0.5 ? nextItem : currentItem).rating
 		let currentTitle = CardTitle(title: currentItem.title, subtitle: currentItem.subtitle)
