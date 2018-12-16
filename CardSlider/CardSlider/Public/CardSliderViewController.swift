@@ -63,6 +63,8 @@ open class CardSliderViewController: UIViewController, UIScrollViewDelegate {
         let currentItem = dataSource.item(for: dataSource.numberOfItems() - trackCurrentIndex - 1)
         
         print("Bookmark button pressed \(bookmark) and item \(currentItem)")
+        print(sender.superview)
+        
         delegate?.bookmarkAdded(bookmark: bookmark)
     }
     
