@@ -112,12 +112,13 @@
                                                     <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="izf-xL-nYc">
                                                         <rect key="frame" x="-3" y="-3" width="37" height="37"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <state key="normal" image="bookmark-50"/>
+                                                        <inset key="contentEdgeInsets" minX="5" minY="5" maxX="5" maxY="5"/>
+                                                        <state key="normal" image="bookmark-card-50"/>
                                                         <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="image" keyPath="imageForDisabled" value="bookmark-50"/>
-                                                            <userDefinedRuntimeAttribute type="image" keyPath="imageForHighlighted" value="bookmark-filled-50"/>
-                                                            <userDefinedRuntimeAttribute type="image" keyPath="imageForNormal" value="bookmark-50"/>
-                                                            <userDefinedRuntimeAttribute type="image" keyPath="imageForSelected" value="bookmark-filled-50"/>
+                                                            <userDefinedRuntimeAttribute type="image" keyPath="imageForDisabled" value="bookmark-card-50"/>
+                                                            <userDefinedRuntimeAttribute type="image" keyPath="imageForHighlighted" value="bookmark-card-filled-50"/>
+                                                            <userDefinedRuntimeAttribute type="image" keyPath="imageForNormal" value="bookmark-card-50"/>
+                                                            <userDefinedRuntimeAttribute type="image" keyPath="imageForSelected" value="bookmark-card-filled-50"/>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
                                                             <action selector="onBookmarkClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KCx-W2-k6V"/>
@@ -268,6 +269,7 @@
                     </view>
                     <connections>
                         <outlet property="bookmarkButton" destination="izf-xL-nYc" id="cMT-Ld-2qm"/>
+                        <outlet property="cardBookmarkButton" destination="izf-xL-nYc" id="KLy-Wh-v9y"/>
                         <outlet property="cardBookmarkView" destination="l2S-i6-aRK" id="Qwg-8N-0ku"/>
                         <outlet property="cardTitleContainer" destination="ZYZ-8Y-xnh" id="MSL-aR-2mN"/>
                         <outlet property="cardTitleView" destination="4Bz-3b-7WF" id="l98-8V-qkD"/>
@@ -287,8 +289,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="bookmark-50" width="37.5" height="37.5"/>
-        <image name="bookmark-filled-50" width="37.5" height="37.5"/>
+        <image name="bookmark-card-50" width="37.5" height="37.5"/>
+        <image name="bookmark-card-filled-50" width="37.5" height="37.5"/>
         <image name="star" width="36" height="36"/>
     </resources>
 </document>
