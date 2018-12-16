@@ -14,6 +14,7 @@
 		748C35D42177A28E00222586 /* CardsLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748C35CD2177A28E00222586 /* CardsLayout.swift */; };
 		748C35D72177A49F00222586 /* CardSliderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748C35D62177A49F00222586 /* CardSliderViewController.swift */; };
 		791FEB3F21A4F361007FDB2C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 748C35CE2177A28E00222586 /* Main.storyboard */; };
+		7974566021C70B9900A6314A /* UIButtonExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7974565F21C70B9900A6314A /* UIButtonExtensions.swift */; };
 		969E76BA2178E8C200877BF5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 969E76B92178E8C200877BF5 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +28,7 @@
 		748C35CD2177A28E00222586 /* CardsLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardsLayout.swift; sourceTree = "<group>"; };
 		748C35CE2177A28E00222586 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		748C35D62177A49F00222586 /* CardSliderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardSliderViewController.swift; sourceTree = "<group>"; };
+		7974565F21C70B9900A6314A /* UIButtonExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtensions.swift; sourceTree = "<group>"; };
 		969E76B92178E8C200877BF5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -84,6 +86,7 @@
 			children = (
 				748C35D62177A49F00222586 /* CardSliderViewController.swift */,
 				748C35CA2177A28E00222586 /* CardSliderCell.swift */,
+				7974565F21C70B9900A6314A /* UIButtonExtensions.swift */,
 				748C35CC2177A28E00222586 /* CardTitleView.swift */,
 			);
 			path = Public;
@@ -174,6 +177,7 @@
 				748C35D12177A28E00222586 /* CardSliderCell.swift in Sources */,
 				748C35D42177A28E00222586 /* CardsLayout.swift in Sources */,
 				748C35D22177A28E00222586 /* RatingView.swift in Sources */,
+				7974566021C70B9900A6314A /* UIButtonExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

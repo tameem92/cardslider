@@ -62,6 +62,15 @@ open class CardSliderViewController: UIViewController, UIScrollViewDelegate {
         let bookmark = titleLabel.text ?? ""
         print("Bookmark button pressed \(bookmark) and item \(currentTitle)")
         
+        bookmarkButton.adjustsImageWhenHighlighted = false
+        bookmarkButton.tintColor = .red
+        
+        if bookmarkButton.isSelected == true {
+            bookmarkButton.isSelected = false
+        } else {
+            bookmarkButton.isSelected = true
+        }
+        
         delegate?.bookmarkAdded(bookmark: currentTitle)
     }
     

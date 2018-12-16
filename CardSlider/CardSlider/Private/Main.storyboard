@@ -109,9 +109,16 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l2S-i6-aRK" userLabel="Bookmark View">
                                                 <rect key="frame" x="180" y="0.0" width="30" height="30"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="izf-xL-nYc">
-                                                        <rect key="frame" x="4" y="4" width="22" height="22"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="izf-xL-nYc">
+                                                        <rect key="frame" x="-3" y="-3" width="37" height="37"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <state key="normal" image="bookmark-50"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="image" keyPath="imageForDisabled" value="bookmark-50"/>
+                                                            <userDefinedRuntimeAttribute type="image" keyPath="imageForHighlighted" value="bookmark-filled-50"/>
+                                                            <userDefinedRuntimeAttribute type="image" keyPath="imageForNormal" value="bookmark-50"/>
+                                                            <userDefinedRuntimeAttribute type="image" keyPath="imageForSelected" value="bookmark-filled-50"/>
+                                                        </userDefinedRuntimeAttributes>
                                                         <connections>
                                                             <action selector="onBookmarkClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KCx-W2-k6V"/>
                                                         </connections>
@@ -280,6 +287,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="bookmark-50" width="37.5" height="37.5"/>
+        <image name="bookmark-filled-50" width="37.5" height="37.5"/>
         <image name="star" width="36" height="36"/>
     </resources>
 </document>
