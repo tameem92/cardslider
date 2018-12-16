@@ -54,7 +54,7 @@ open class CardSliderViewController: UIViewController, UIScrollViewDelegate {
 	@IBOutlet private var scrollStack: UIStackView!
 	@IBOutlet private var scrollPlaceholderView: UIView!
     
-    @IBOutlet weak var bookmarkButton: UIButton!
+    @IBOutlet weak var cardBookmarkButton: UIButton!
     public var delegate : BookmarkDelegate?
     public var currentTitle : String = ""
     
@@ -62,13 +62,13 @@ open class CardSliderViewController: UIViewController, UIScrollViewDelegate {
         let bookmark = titleLabel.text ?? ""
         print("Bookmark button pressed \(bookmark) and item \(currentTitle)")
         
-        bookmarkButton.adjustsImageWhenHighlighted = false
-        bookmarkButton.tintColor = .red
+        cardBookmarkButton.adjustsImageWhenHighlighted = false
+        cardBookmarkButton.tintColor = .red
         
-        if bookmarkButton.isSelected == true {
-            bookmarkButton.isSelected = false
+        if cardBookmarkButton.isSelected == true {
+            cardBookmarkButton.isSelected = false
         } else {
-            bookmarkButton.isSelected = true
+            cardBookmarkButton.isSelected = true
         }
         
         delegate?.bookmarkAdded(bookmark: currentTitle)
@@ -105,8 +105,8 @@ open class CardSliderViewController: UIViewController, UIScrollViewDelegate {
 	override open func viewDidLoad() {
 		super.viewDidLoad()
         
-        bookmarkButton.setImage(UIImage.init(named: "bookmark"), for: .normal)
-        bookmarkButton.imageView?.contentMode = .scaleAspectFit
+        cardBookmarkButton.setImage(UIImage.init(named: "bookmark-50"), for: .normal)
+        cardBookmarkButton.imageView?.contentMode = .scaleAspectFit
         
 		collectionView.isPagingEnabled = true
 		collectionView.showsHorizontalScrollIndicator = false
