@@ -62,7 +62,7 @@ open class CardSliderViewController: UIViewController, UIScrollViewDelegate {
         let bookmark = titleLabel.text ?? ""
         print("Bookmark button pressed \(bookmark) and item \(currentTitle)")
         
-        delegate?.bookmarkAdded(bookmark: bookmark)
+        delegate?.bookmarkAdded(bookmark: currentTitle)
     }
     
     @IBAction func onBackClick(_ sender: UIButton) {
@@ -125,6 +125,7 @@ open class CardSliderViewController: UIViewController, UIScrollViewDelegate {
 	private func prepareFirstCard() {
 		guard let layout = collectionView.collectionViewLayout as? CardsLayout else { return }
 		let item = dataSource.item(for: dataSource.numberOfItems() - layout.currentPage - 1)
+        currentTitle = item.title
 		cardTitleView.set(title: CardTitle(title: item.title, subtitle: item.subtitle))
 	}
 	
