@@ -50,6 +50,7 @@ open class CardSliderViewController: UIViewController, UIScrollViewDelegate {
 	@IBOutlet private var cardTitleContainer: UIView!
 	@IBOutlet private var cardTitleView: CardTitleView!
 	@IBOutlet private var ratingView: RatingView!
+    @IBOutlet weak var bookmarkView: BookmarkView!
     @IBOutlet weak var cardBookmarkView: UIView!
     
     @IBOutlet private var descriptionLabel: UILabel!
@@ -328,6 +329,9 @@ extension CardSliderViewController: CardsLayoutDelegate {
 		let nextItem = dataSource.item(for: dataSource.numberOfItems() - nextIndex - 1)
         self.currentTitle = nextItem.title
         self.currentIsBookmarked = nextItem.bookmarked ?? false
+        
+        print("Found new book mark value \(nextItem.bookmarked)")
+        bookmarkView.bookmarked = nextItem.bookmarked ?? false
 		
 		ratingView.rating = (progress > 0.5 ? nextItem : currentItem).rating
 		let currentTitle = CardTitle(title: currentItem.title, subtitle: currentItem.subtitle)
