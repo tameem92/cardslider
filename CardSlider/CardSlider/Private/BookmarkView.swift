@@ -15,15 +15,5 @@ class BookmarkView: UIStackView {
     
     
     private func update() {
-        let newBookmarkValue = bookmarked ?? false
-        print("Updating bookmark with new value: \(newBookmarkValue)")
-        guard let bookmarkButton = arrangedSubviews.filter({ $0 is UIButton }) as? [UIButton] else { return }
-        
-        
-        print("Sub views: \(arrangedSubviews)")
-        print("Found button \(bookmarkButton)")
-        if bookmarkButton.count > 0 {
-            bookmarkButton[0].isSelected = newBookmarkValue
-        }
     }
 }

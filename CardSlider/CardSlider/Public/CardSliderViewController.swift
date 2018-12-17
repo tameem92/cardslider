@@ -140,6 +140,8 @@ open class CardSliderViewController: UIViewController, UIScrollViewDelegate {
 		guard let layout = collectionView.collectionViewLayout as? CardsLayout else { return }
 		let item = dataSource.item(for: dataSource.numberOfItems() - layout.currentPage - 1)
         currentTitle = item.title
+        
+        cardBookmarkButton.isSelected = item.bookmarked ?? false
 		cardTitleView.set(title: CardTitle(title: item.title, subtitle: item.subtitle))
 	}
 	
@@ -329,8 +331,6 @@ extension CardSliderViewController: CardsLayoutDelegate {
 		let nextItem = dataSource.item(for: dataSource.numberOfItems() - nextIndex - 1)
         self.currentTitle = nextItem.title
         self.currentIsBookmarked = nextItem.bookmarked ?? false
-        
-        print("Found new book mark value \(nextItem.bookmarked ?? false)")
         cardBookmarkButton.isSelected = nextItem.bookmarked ?? false
 		
 		ratingView.rating = (progress > 0.5 ? nextItem : currentItem).rating
