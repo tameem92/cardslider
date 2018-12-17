@@ -330,8 +330,8 @@ extension CardSliderViewController: CardsLayoutDelegate {
         self.currentTitle = nextItem.title
         self.currentIsBookmarked = nextItem.bookmarked ?? false
         
-        print("Found new book mark value \(nextItem.bookmarked)")
-        bookmarkView.bookmarked = nextItem.bookmarked ?? false
+        print("Found new book mark value \(nextItem.bookmarked ?? false)")
+        cardBookmarkButton.isSelected = nextItem.bookmarked ?? false
 		
 		ratingView.rating = (progress > 0.5 ? nextItem : currentItem).rating
 		let currentTitle = CardTitle(title: currentItem.title, subtitle: currentItem.subtitle)
